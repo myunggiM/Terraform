@@ -1,0 +1,7 @@
+new version terraform : https://www.terraform.io/downloads.html
+previous version terraform : https://releases.hashicorp.com/terraform/
+
+curl -sO https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_darwin_amd64.zip
+unzip terraform_0.12.24_darwin_amd64.zip
+mv terraform /usr/local/bin
+terraform --version
