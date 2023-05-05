@@ -33,3 +33,18 @@ resource "aws_internet_gateway" "igw" {
     Name ="terraform-101-igw"
   }
 }
+resource "aws_eip" "name" {
+  vpc =true
+
+  lifecycle {
+    create_before_destory =true
+  }
+}
+resource "aws_nat_gateway" "nat_gateway"{
+  allocation_id = aws_rip.nat.id
+  subnet_id = aws_subnet.public_subnet.id
+
+  tags={
+    Name ="terraform-NATGW"
+  }
+}
