@@ -19,7 +19,7 @@ resource "aws_subnet" "public_subnet"{
 
 resource "aws_subnet" "private_subnet"{
   vpc_id = aws_vpc.main.id
-  cidr_block ="10.0.0.0/24"
+  cidr_block ="10.0.10.0/24"
 
   tags ={
     Name = "terraform-101-private_subnet"
